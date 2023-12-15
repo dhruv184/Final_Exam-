@@ -29,18 +29,13 @@ while True :
     if choice == 2 :        
 
         print("\n")
-        type= str(input("Enter Product Type (Computer , Phone) : "))
-        type.capitalize()
+        x= str(input("Enter Product Type (Computer , Phone) : "))
+        type = x.capitalize()
         p = store.findProduct(type)
 
         if isinstance(p , Product):
 
             print(p)
-    
-    if choice == 3:
-
-        print("Total Revenue : ")
-        store.totalRevenue()
 
     if choice == 4 :
 

@@ -57,7 +57,7 @@ class Store:
     def getProducts(self):
 
         return self.products
-        
+
     def saveData(self):
 
         rows = [ ]
