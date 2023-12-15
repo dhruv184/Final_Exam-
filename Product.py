@@ -8,7 +8,7 @@ class Product :
         self.name = name
         self.type = type
         self.price = price
-        self.quantity = quantity
+        self.quantity = quantity  
 
     def __str__(self):
 
@@ -56,8 +56,8 @@ class Store:
 
     def getProducts(self):
 
-        return self.products
-    
+        return self.product
+        
     def saveData(self):
 
         rows = [ ]
@@ -67,7 +67,7 @@ class Store:
             row = [p.code , p.name , p.type , p.price , p.quantity]
             rows.append(row)
 
-        Data.writeData('products_sales.csv' , rows)    
+        Data.writeData('products_sales.csv' , rows)   
 
     def findProduct(self, type):
 

@@ -1,6 +1,7 @@
 from Product import Product , Store 
 
 store = Store()
+
 def displayMainMenu():
 
     print("\nPlease select One of the Follwoing Options : \n")
@@ -35,6 +36,11 @@ while True :
         if isinstance(p , Product):
 
             print(p)
+    
+    if choice == 3:
+
+        print("Total Revenue : ")
+        store.totalRevenue()
 
     if choice == 4 :
 
@@ -49,7 +55,7 @@ while True :
 
         store.addProduct(p)
         store.saveData()
-        
+
     if choice == 5 :
 
         print("\n Thanks You \n")
