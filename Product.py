@@ -56,7 +56,7 @@ class Store:
 
     def getProducts(self):
 
-        return self.product
+        return self.products
         
     def saveData(self):
 
