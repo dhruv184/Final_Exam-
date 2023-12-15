@@ -68,4 +68,4 @@ class Store:
                  break   
         return p
     
-store = Store()    
+    
