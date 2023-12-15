@@ -38,9 +38,11 @@ class Data :
 
     def writeData(filename , rows):
 
-        with open(filename , "w" , newline ='') as file:
+        with open(filename , 'w' , newline ='') as file:
 
-            writer = csv.writer(rows)  
+            writer = csv.writer(file)  
+
+            writer.writerows(rows)
 
 class Store:
 
@@ -55,6 +57,17 @@ class Store:
     def getProducts(self):
 
         return self.products
+    
+    def saveData(self):
+
+        rows = [ ]
+
+        for p in self.products:
+
+            row = [p.code , p.name , p.type , p.price , p.quantity]
+            rows.append(row)
+
+        Data.writeData('products_sales.csv' , rows)    
 
     def findProduct(self, type):
 
@@ -63,9 +76,8 @@ class Store:
         for product in self.products:
 
             if product.type == type :
-
-                 p = product
-                 break   
-        return p
+               
+                p = product
+                print(p)
     
     

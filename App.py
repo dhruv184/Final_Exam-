@@ -28,17 +28,13 @@ while True :
     if choice == 2 :        
 
         print("\n")
-        code = str(input("Enter Product Type (computer , phone) : "))
-
-        p = store.findProduct(code)
+        type= str(input("Enter Product Type (Computer , Phone) : "))
+        type.capitalize()
+        p = store.findProduct(type)
 
         if isinstance(p , Product):
 
             print(p)
-
-        else:
-
-            print("No such Type") 
 
     if choice == 4 :
 
@@ -52,6 +48,12 @@ while True :
         p = Product(code , name , type , price , quantity)
 
         store.addProduct(p)
+        store.saveData()
+        
+    if choice == 5 :
+
+        print("\n Thanks You \n")
+        break    
 
 
 
